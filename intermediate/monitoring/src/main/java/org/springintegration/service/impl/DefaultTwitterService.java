@@ -5,7 +5,7 @@
  *	 you may not use this file except in compliance with the License.
  *	 You may obtain a copy of the License at
  *
- *		 http://www.apache.org/licenses/LICENSE-2.0
+ *		 https://www.apache.org/licenses/LICENSE-2.0
  *
  *	 Unless required by applicable law or agreed to in writing, software
  *	 distributed under the License is distributed on an "AS IS" BASIS,
@@ -22,7 +22,7 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.integration.endpoint.SourcePollingChannelAdapter;
-import org.springframework.integration.samples.storedprocedure.model.TwitterMessage;
+import org.springframework.integration.model.TwitterMessage;
 import org.springframework.integration.monitor.IntegrationMBeanExporter;
 import org.springframework.integration.service.TwitterService;
 import org.springframework.integration.support.MessageBuilder;
@@ -59,7 +59,7 @@ public class DefaultTwitterService implements TwitterService {
 	private IntegrationMBeanExporter exporter;
 	/**
 	 * Constructor that initializes the 'twitterMessages' Map as a simple LRU
-	 * cache. @See http://blogs.oracle.com/swinger/entry/collections_trick_i_lru_cache
+	 * cache. @See https://blogs.oracle.com/swinger/entry/collections_trick_i_lru_cache
 	 */
 	public DefaultTwitterService() {
 

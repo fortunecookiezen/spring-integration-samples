@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 package org.springframework.integration.samples.jpa.domain;
 
 import java.util.Date;
@@ -28,32 +29,29 @@ import javax.persistence.TemporalType;
 
 /**
  * A simple POJO representing a Person.
- *
  * @author Amol Nayak
  * @author Gunnar Hillert
- *
+ * @author Artem Bilan
  */
 @Entity
-@Table(name="PEOPLE")
+@Table(name = "PEOPLE")
 public class Person {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 
 	private String name;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name="CREATED_DATE_TIME")
+	@Column(name = "CREATED_DATE_TIME")
 	private Date createdDateTime;
 
 	public Person() {
-		super();
 		this.createdDateTime = new Date();
 	}
 
 	public Person(String name) {
-		super();
 		this.name = name;
 		this.createdDateTime = new Date();
 	}
@@ -106,7 +104,8 @@ public class Person {
 			if (other.name != null) {
 				return false;
 			}
-		} else if (!name.equals(other.name)) {
+		}
+		else if (!name.equals(other.name)) {
 			return false;
 		}
 		return true;
